@@ -1,0 +1,35 @@
+ManifestFileVersion: 0
+CRC: 4279091668
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d95316e7124389542941e037e8454f00
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e77aee48c2f7a93f4007ab61014a21eb
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Low Poly Furniture/NewITems/DoubleBed.prefab
+Dependencies: []

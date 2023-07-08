@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 2074248512
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 47b2cfa06719fd531bac4295e5642bb1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: cd5cb4f972087db85db2a509d7a39399
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Low Poly Furniture/NewITems/Standart Chair.prefab
+Dependencies: []

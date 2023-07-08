@@ -26,7 +26,11 @@ namespace dduR
         Wall
     }
 
-   
+    public enum WebRequestPath
+    {
+        Web = 0,
+        Win
+    }
 
 
 

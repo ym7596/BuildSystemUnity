@@ -1,0 +1,58 @@
+ManifestFileVersion: 0
+CRC: 3556018423
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: armchair
+      Dependencies: {}
+    Info_1:
+      Name: blue flower
+      Dependencies: {}
+    Info_2:
+      Name: couch
+      Dependencies: {}
+    Info_3:
+      Name: cylinder lamp
+      Dependencies: {}
+    Info_4:
+      Name: dark case
+      Dependencies: {}
+    Info_5:
+      Name: doublebed
+      Dependencies: {}
+    Info_6:
+      Name: gaming chair
+      Dependencies: {}
+    Info_7:
+      Name: gaming keyboard
+      Dependencies: {}
+    Info_8:
+      Name: lamp
+      Dependencies: {}
+    Info_9:
+      Name: larger case
+      Dependencies: {}
+    Info_10:
+      Name: nightstand
+      Dependencies: {}
+    Info_11:
+      Name: old screen
+      Dependencies: {}
+    Info_12:
+      Name: rectangle table
+      Dependencies: {}
+    Info_13:
+      Name: round table
+      Dependencies: {}
+    Info_14:
+      Name: singlebed
+      Dependencies: {}
+    Info_15:
+      Name: standart bookshelf
+      Dependencies: {}
+    Info_16:
+      Name: standart chair
+      Dependencies: {}
+    Info_17:
+      Name: standart wardrobe
+      Dependencies: {}

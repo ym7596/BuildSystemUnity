@@ -1,0 +1,39 @@
+ManifestFileVersion: 0
+CRC: 2818299036
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 79f8e8f1bb1ac1467efd3836d21be20a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8ea1ec0dac216ca7e519426a0cdcf29c
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Low Poly Furniture/NewITems/Lamp.prefab
+Dependencies: []
