@@ -83,7 +83,10 @@ namespace dduR
         {
             transform.position = pos;
         }
-
+        public void SetId(string id)
+        {
+            networkId = id;
+        }
         public void SetName(string name)
         {
 

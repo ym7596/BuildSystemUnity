@@ -32,6 +32,12 @@ namespace dduR
         Win
     }
 
+    public enum LoadType
+    {
+        Standalone,
+        Web
+    }
+
 
 
     public enum ObjectPlacedType

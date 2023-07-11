@@ -1,0 +1,219 @@
+[
+    {
+        "id": "0",
+        "filename": "Armchair",
+        "thumbnail": "Armchair",
+        "bundleKey": "Armchair",
+        "upAt": 0,
+        "bundleType": 1,
+        "type": 0,
+        "assetKeys": [
+            "Armchair"
+        ]
+    },
+    {
+        "id": "1",
+        "filename": "Blue Flower",
+        "thumbnail": "Blue Flower",
+        "bundleKey": "Blue Flower",
+        "upAt": 0,
+        "bundleType": 1,
+        "type": 2,
+        "assetKeys": [
+            "Blue Flower"
+        ]
+    },
+    {
+        "id": "2",
+        "filename": "Couch",
+        "thumbnail": "Couch",
+        "bundleKey": "Couch",
+        "upAt": 0,
+        "bundleType": 1,
+        "type": 0,
+        "assetKeys": [
+            "Couch"
+        ]
+    },
+    {
+        "id": "3",
+        "filename": "Cylinder Lamp",
+        "thumbnail": "Cylinder Lamp",
+        "bundleKey": "Cylinder Lamp",
+        "upAt": 0,
+        "bundleType": 1,
+        "type": 0,
+        "assetKeys": [
+            "Cylinder Lamp"
+        ]
+    },
+    {
+        "id": "4",
+        "filename": "Dark Case",
+        "thumbnail": "Dark Case",
+        "bundleKey": "Dark Case",
+        "upAt": 0,
+        "bundleType": 1,
+        "type": 2,
+        "assetKeys": [
+            "Dark Case"
+        ]
+    },
+    {
+        "id": "5",
+        "filename": "DoubleBed",
+        "thumbnail": "DoubleBed",
+        "bundleKey": "DoubleBed",
+        "upAt": 0,
+        "bundleType": 1,
+        "type": 0,
+        "assetKeys": [
+            "DoubleBed"
+        ]
+    },
+    {
+        "id": "6",
+        "filename": "Gaming Chair",
+        "thumbnail": "Gaming Chair",
+        "bundleKey": "Gaming Chair",
+        "upAt": 0,
+        "bundleType": 1,
+        "type": 0,
+        "assetKeys": [
+            "Gaming Chair"
+        ]
+    },
+    {
+        "id": "7",
+        "filename": "Gaming Keyboard",
+        "thumbnail": "Gaming Keyboard",
+        "bundleKey": "Gaming Keyboard",
+        "upAt": 0,
+        "bundleType": 1,
+        "type": 2,
+        "assetKeys": [
+            "Gaming Keyboard"
+        ]
+    },
+    {
+        "id": "8",
+        "filename": "Lamp",
+        "thumbnail": "Lamp",
+        "bundleKey": "Lamp",
+        "upAt": 0,
+        "bundleType": 1,
+        "type": 0,
+        "assetKeys": [
+            "Lamp"
+        ]
+    },
+    {
+        "id": "9",
+        "filename": "Larger Case",
+        "thumbnail": "Larger Case",
+        "bundleKey": "Larger Case",
+        "upAt": 0,
+        "bundleType": 1,
+        "type": 2,
+        "assetKeys": [
+            "Larger Case"
+        ]
+    },
+    {
+        "id": "10",
+        "filename": "NightStand",
+        "thumbnail": "NightStand",
+        "bundleKey": "NightStand",
+        "upAt": 0,
+        "bundleType": 1,
+        "type": 1,
+        "assetKeys": [
+            "NightStand"
+        ]
+    },
+    {
+        "id": "11",
+        "filename": "Old Screen",
+        "thumbnail": "Old Screen",
+        "bundleKey": "Old Screen",
+        "upAt": 0,
+        "bundleType": 1,
+        "type": 2,
+        "assetKeys": [
+            "Old Screen"
+        ]
+    },
+    {
+        "id": "12",
+        "filename": "Rectangle Table",
+        "thumbnail": "Rectangle Table",
+        "bundleKey": "Rectangle Table",
+        "upAt": 0,
+        "bundleType": 1,
+        "type": 1,
+        "assetKeys": [
+            "Rectangle Table"
+        ]
+    },
+    {
+        "id": "13",
+        "filename": "Round Table",
+        "thumbnail": "Round Table",
+        "bundleKey": "Round Table",
+        "upAt": 0,
+        "bundleType": 1,
+        "type": 1,
+        "assetKeys": [
+            "Round Table"
+        ]
+    },
+    {
+        "id": "14",
+        "filename": "SingleBed",
+        "thumbnail": "SingleBed",
+        "bundleKey": "SingleBed",
+        "upAt": 0,
+        "bundleType": 1,
+        "type": 0,
+        "assetKeys": [
+            "SingleBed"
+        ]
+    },
+    {
+        "id": "15",
+        "filename": "Standart Bookshelf",
+        "thumbnail": "Standart Bookshelf",
+        "bundleKey": "Standart Bookshelf",
+        "upAt": 0,
+        "bundleType": 1,
+        "type": 0,
+        "assetKeys": [
+            "Standart Bookshelf"
+        ]
+    },
+   
+    {
+        "id": "16",
+        "filename": "Standart Chair",
+        "thumbnail": "Standart Chair",
+        "bundleKey": "Standart Chair",
+        "upAt": 0,
+        "bundleType": 1,
+        "type": 0,
+        "assetKeys": [
+            "Standart Chair"
+        ]
+    },
+    {
+        "id": "17",
+        "filename": "Standart Wardrobe",
+        "thumbnail": "Standart Wardrobe",
+        "bundleKey": "Standart Wardrobe",
+        "upAt": 0,
+        "bundleType": 1,
+        "type": 0,
+        "assetKeys": [
+            "Standart Wardrobe"
+        ]
+    }
+]

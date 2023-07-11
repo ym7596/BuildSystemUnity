@@ -10,13 +10,18 @@ public class UICanvas : MonoBehaviour
 
     [SerializeField]
     private RectTransform _canvasRect;
-
+    [SerializeField]
     private RectTransform _uiEditBarRect;
 
     [SerializeField]
     private Camera _uicamera;
 
+    [SerializeField]
+    private GameObject _togglePanel;
+
     public GameObject resetPanel;
+
+    public BundleInfos bundleInfos;
 
    
     public event Action onButton_Editdone;
@@ -28,11 +33,11 @@ public class UICanvas : MonoBehaviour
     public event Action<bool> onButton_RoomRotate;
    
 
- 
+   
 
     public void OnButton_TogglePanel(bool isOn)
     {
-        
+        _togglePanel.SetActive(isOn);
     }
 
     public void SetEditPanelPos(Transform currentPos)
@@ -49,7 +54,7 @@ public class UICanvas : MonoBehaviour
         }
 
         _uiEditBarRect.position
-        = new Vector3(pos.x, pos.y + 350f, _editBar.transform.position.z);
+        = new Vector3(pos.x, pos.y + 150f, _editBar.transform.position.z);
     }
 
     public void EditBarOn(bool isOn)
@@ -71,14 +76,14 @@ public class UICanvas : MonoBehaviour
     {
         onButton_Revert?.Invoke();
 
-        resetPanel.SetActive(false);
+      //  resetPanel.SetActive(false);
     }
 
     public void OnButton_Reset()
     {
         onButton_Reset?.Invoke();
 
-        resetPanel.SetActive(false);
+      //  resetPanel.SetActive(false);
     }
 
     public void OnButton_EditDone()

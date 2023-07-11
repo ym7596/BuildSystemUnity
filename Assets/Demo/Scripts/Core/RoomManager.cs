@@ -63,7 +63,7 @@ namespace dduR
                 _myObject = value;
 
                 bool isObject = value == null ? false : true;
-
+                _uiCanvas.EditBarOn(isObject);
                 editMode = isObject;
             }
         }
@@ -80,6 +80,26 @@ namespace dduR
         {
             base.OnApplicationQuit();
         }
+
+        private void OnEnable()
+
+        {
+            _uiCanvas.onButton_Editdone += EditDoneObject;
+            _uiCanvas.onButton_RotateObject += RotateObject;
+            _uiCanvas.onButton_RemoveObject += DeleteObject;
+            _uiCanvas.onButton_Reset += ResetRoom;
+
+        }
+
+    
+        private void OnDisable()
+        {
+            _uiCanvas.onButton_Editdone -= EditDoneObject;
+            _uiCanvas.onButton_RotateObject -= RotateObject;
+            _uiCanvas.onButton_RemoveObject -= DeleteObject;
+            _uiCanvas.onButton_Reset -= ResetRoom;
+        }
+
         private void Start()
         {
 
@@ -94,17 +114,6 @@ namespace dduR
             _objDict = new Dictionary<int, MyObject>();
 
             _mySpaceData = new MySpaceData();
-        }
-
-
-        private void OnEnable()
-        {
-            
-        }
-
-        private void OnDisable()
-        {
-            
         }
 
 
@@ -144,6 +153,55 @@ namespace dduR
 
             UpdateFunction(phase, myRay);
         }
+
+        public IEnumerator RequestCreateObject(BundleInfo bundle)
+        {
+
+           GameObject obj = null;
+            _isCreating = true;
+            var loadR = Resources.LoadAsync<GameObject>(bundle.filename);
+            /*  RequestSpaceObject(bundle, (isComplete, reqObject) =>
+              {
+                  if (isComplete == true)
+                  {
+                      obj = reqObject;
+                  }
+              });*/
+            yield return new WaitUntil(() => !loadR.isDone);
+
+            obj = Instantiate(loadR.asset as GameObject,_centerTransform);
+            while (obj == null)
+                yield return null;
+
+            ObjectPlacedType types = (ObjectPlacedType) bundle.type;
+            //ItemCategoryType types = (ItemCategoryType) bundle.type;
+
+            SetObjectInit(obj, types);
+            SetCurrentObjectState(MyObjectPr);
+
+            MyObjectPr.SetId(bundle.id);
+
+            MyObjectPr.SetUniqueID(GetUniqueID(_objDict.Keys.ToList()));
+
+            SetListData(MyObjectPr);
+
+            InputClear();
+            yield return null;
+            _uiCanvas.OnButton_TogglePanel(false);
+
+            _uiCanvas.SetEditPanelPos(MyObjectPr.transform);
+            PlaceObject();
+            _isCreating = false;
+
+        }
+        public void CreateObject(string name)
+        {
+            GameObject obj = Resources.Load<GameObject>(name);
+            /*
+             */
+
+        }
+
         #region Update Func
         public void UpdateFunction(TouchPhase phase, Ray ray)
         {
@@ -205,6 +263,7 @@ namespace dduR
 
             InputClear();
             SetCurrentObjectState(MyObjectPr);
+          
         }
         public void SetPanelSlide(bool UIDetect)
         {
@@ -570,7 +629,17 @@ namespace dduR
             _mySpaceData.spaceObjects[itemindex].UpdateTransform(pos, rot, Vector3.one);
         }
 
-        public void RemoveObject(MySpaceData mySpaceItemClass)
+
+        public void RemoveObj()
+        {
+            RemoveObject(_mySpaceData);
+        }
+
+        public void RotateObject()
+        {
+            MyObjectPr.SetRotate(rotateAmount);
+        }
+        private void RemoveObject(MySpaceData mySpaceItemClass)
         {
             //todo : 삭제할 때 parent 이하 오브젝트들도 데이터에서 지워야함.
             //toto complete
@@ -601,7 +670,74 @@ namespace dduR
 
         #endregion
 
+        #region OnButton Function
+       
+     
+     
 
+        public void EditDoneObject()
+        {
+            if (MyObjectPr.CanPlaced == false)
+                return;
+
+
+            UpdateTransformObject(MyObjectPr.transform.localPosition,
+                MyObjectPr.transform.localRotation.eulerAngles);
+            UpdateParentID(MyObjectPr.ParentIndex);
+            CheckIsChildObject(MyObjectPr);
+            SetCurrentObjectState(null);
+            InputClear();
+        }
+
+        private void CheckIsChildObject(MyObject child)
+        {
+            if (child.placedType != ObjectPlacedType.Prop)
+                return;
+
+            foreach (KeyValuePair<int, MyObject> datas in _objDict)
+            {
+                if (datas.Value.ParentIndex != SpaceConfig.newObject) //parent가 있다면.
+                {
+                    MyObject parent = _objDict[datas.Value.ParentIndex];
+                    parent.SetAddChildObject(datas.Value.Index);
+                }
+            }
+        }
+
+        public void DeleteObject()
+        {
+            bool isExist = _mySpaceData.spaceObjects.Exists(x => x.index == MyObjectPr.Index);
+
+            if (isExist)
+            {
+                Destroy(MyObjectPr.gameObject);
+                RemoveObject(_mySpaceData);
+            }
+            else
+            {
+                Destroy(MyObjectPr.gameObject);
+            }
+
+            MyObjectPr = null;
+        }
+
+        public void ResetRoom()
+        {
+            if (editMode == true)
+                return;
+
+            foreach (KeyValuePair<int, MyObject> item in _objDict)
+            {
+                Destroy(item.Value.gameObject);
+            }
+            _mySpaceData = new();
+            _objDict.Clear();
+            //_saveManager.ResetDatas();
+        }
+
+   
+
+        #endregion
 
     }
 
